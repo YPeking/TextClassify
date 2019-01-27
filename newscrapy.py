@@ -13,7 +13,7 @@ import random
 # 初始化数据库，若数据库和表不存在则创建
 def init_DB():
     # 连接数据库
-    db = pymysql.connect("localhost", "root", "yp705358", "sys")
+    db = pymysql.connect("localhost", "root", "mysql 数据库密码", "sys")
     cursor = db.cursor()
     # 执行sql语句，创造数据库
     cursor.execute("create database if not exists news_DB;")
@@ -150,7 +150,7 @@ if __name__ == "__main__":
     for key in classify_dict:
         for index in range(2, 30):
             # 连接数据库
-            db = pymysql.connect("localhost", "root", "yp705358", "sys")
+            db = pymysql.connect("localhost", "root", "mysql 数据库密码", "sys")
             cursor = db.cursor()
             cursor.execute("use news_DB;")
             # 获取新闻链接
