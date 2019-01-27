@@ -6,7 +6,7 @@ import jieba.analyse
 
 def word_segmentation(stop_word_path):
     # 连接数据库
-    conn = pymysql.connect(host='127.0.0.1', user='root', passwd='yp705358', db = 'news_DB', charset = "utf8")
+    conn = pymysql.connect(host='127.0.0.1', user='root', passwd='mysql 数据库密码', db = 'news_DB', charset = "utf8")
     cursor = conn.cursor()
     # 使用分词数据库sql语句
     sql_str = 'use news_DB;'
